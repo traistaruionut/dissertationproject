@@ -1,0 +1,3 @@
+test%27%20and%20if(version()%20like%20%275%25%27%2Csleep(3)%2C%27false%27)%3B%23
+asd
+dfe

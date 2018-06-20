@@ -1,0 +1,8 @@
+controllers/MainController.class
+repositories/UserRepository.class
+services/VulnerableRepository.class
+entities/User.class
+config/SwaggerConfig.class
+hello/Application.class
+controllers/QueryTry.class
+controllers/VulnerableController.class
