@@ -124,7 +124,7 @@ public class MyMojo extends AbstractMojo {
                 if(httpResponse.getStatus() != 404 && httpResponse.getStatus() != 500){
                     Timestamp endingTimestamp = new Timestamp(System.currentTimeMillis());
                     Long durationInSeconds = (endingTimestamp.getTime() - startingTimestamp.getTime())/1000;
-                    if (durationInSeconds > delay) {
+                    if (durationInSeconds >= delay) {
                         getLog().info(ep + " might be vulnerable");
                         vulnerableEndpoints.add(ep);
                     }
@@ -139,7 +139,6 @@ public class MyMojo extends AbstractMojo {
     }
 
     private void report(ArrayList<String> vulnerableEndpoints) throws MojoExecutionException {
-
         if (vulnerableEndpoints.size() > 0) {
             getLog().info("Endpoints found vulnerable: ");
             vulnerableEndpoints.stream().forEach(endpoint -> getLog().info(endpoint));
